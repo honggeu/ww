@@ -69,15 +69,15 @@ jobs:
   #         file: ${{ env.PROJECT_DIR }}/coverage.xml
   #         name: ${{ env.PROJECT_DIR }}-coverage-report
 
-  # build:
-  #   runs-on: ubuntu-latest
-  #   needs:
-  #     - test
-  #   permissions:
-  #     contents: read
-  #     packages: write
-  #   env:
-  #     PROJECT_DIR: basic-ci
+  build:
+    runs-on: ubuntu-latest
+    needs:
+      - test
+    permissions:
+      contents: read
+      packages: write
+    env:
+      PROJECT_DIR: basic-ci
 
   #   steps:
   #     - uses: actions/checkout@v2
